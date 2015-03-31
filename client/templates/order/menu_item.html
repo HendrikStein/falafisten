@@ -1,0 +1,24 @@
+<template name="menuItem">
+ <div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+      <img src="placeholder.svg" alt="{{title}}">
+      <div class="caption">
+        <h3>{{title}}</h3>
+        <p>{{Description}}</p>
+        {{#each ingredients}}
+          {{name}}
+          {{#if[isHealthy(kcal)]}}
+            <span class="label label-success">{{name}}</span>
+          {{/if}}
+          {{#if[isHealthWarning(kcal)]}}
+            <span class="label label-warning">{{name}}</span>
+          {{/if}}
+          {{#if[isHealthDangerous(kcal)]}}
+            <span class="label label-danger">{{name}}</span>
+          {{/if}}
+        {{/each}}
+        <p><a href="#" class="btn btn-default" role="button">Hinzufügen</a></p>
+      </div>
+    </div>
+  </div>
+</template>

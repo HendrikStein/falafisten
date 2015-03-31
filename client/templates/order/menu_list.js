@@ -6,16 +6,34 @@ var menuData = [
     ingredients:[
       {
         name:'Brot',
-        amount: 1,
         kcal:150
       },
       {
         name:'Kichererbsen',
-        amount:3,
+        kcal:300
+      },
+      {
+        name:'Sauce',
+        kcal:500
+      }
+    ]
+  },
+    {
+    title:'Linsensuppe',
+    description:'Leckere und gesunde Linsensuppe',
+    type:['vegan', 'vegetarisch'],
+    ingredients:[
+      {
+        name:'Linsen',
+        kcal:150
+      },
+      {
+        name:'Zitrone',
         kcal:50
       }
     ]
   }
+
 ];
 
 Template.menu.helpers({

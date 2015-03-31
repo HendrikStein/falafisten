@@ -38,4 +38,4 @@ var menuData = [
 
 Template.menu.helpers({
   menu: menuData
-})
+});

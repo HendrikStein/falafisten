@@ -1,23 +1,27 @@
-Template.menuItem.helpers({
+Template.item.helpers({
   
-  isHealthy: function(kcal) {
-    if(kcal <= 150) {
+  isHealthy: function() {
+    if(this.kcal <= 150) {
       return true;
     }
     return false;
   },
   
-  isHealthWarning: function(kcal) {
-    if(kcal == 300) {
+  isHealthWarning: function() {
+    if(this.kcal > 150 && this.kcal <500) {
       return true;
     }
     return false;
   },
   
-  isHealthDangerous: function(kcal) {
-    if(kcal == 500) {
+  isHealthDangerous: function() {
+    if(this.kcal >= 500) {
       return true;
     }
     return false;    
-  }
-})
+  },
+    log: function () {
+        alert(this.kcal);
+        console.log(this);
+    }
+});

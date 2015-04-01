@@ -37,5 +37,7 @@ var menuData = [
 ];
 
 Template.menu.helpers({
-  menu: menuData
+  menu: function() {
+      return Menu.find();
+  }
 });

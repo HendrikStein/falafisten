@@ -3,21 +3,47 @@
     <title>Falafisten</title>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <ul class="nav nav-pills pull-right">
-            <li><a href="#">Home</a></li>
-            <li>
-                <div class="nav nav-pills">{{> loginButtons}}</div>
-            </li>
-        </ul>
-        <img width="60%" src="falafisten.jpg" alt="Falafisten" style="margin-bottom:10px">
-    </div>
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#falafistenNavBar">
+                    <span class="sr-only">Navigation ein-/ausblenden</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Die Falafisten</a>
+            </div>
+
+
+            <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
+            <div class="collapse navbar-collapse" id="falafistenNavBar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Menü</a></li>
+                    <li><a href="#">Warenkorb <span class="badge">0</span></a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Impresssum</a></li>
+                    <li>
+                        <div class="nav nav-pills">{{> loginButtons}}</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </nav>
+
     <div>
         {{>menu}}
     </div>
     <div class="footer">
-        <p>&copy; Copyright by koRnzept 2015</p>
+        <p>&copy; Copyright by Osama bin Erbse 2015</p>
     </div>
+
 </div>
 </body>
